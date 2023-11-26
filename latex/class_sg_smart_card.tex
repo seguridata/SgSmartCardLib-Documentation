@@ -1,0 +1,775 @@
+\doxysection{Sg\+Smart\+Card Class Reference}
+\hypertarget{class_sg_smart_card}{}\label{class_sg_smart_card}\index{SgSmartCard@{SgSmartCard}}
+Inheritance diagram for Sg\+Smart\+Card\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sg_smart_card}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a4b0e13955298be6c8703604301ce0026}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a card. \end{DoxyCompactList}\item 
+\Hypertarget{class_sg_smart_card_a6346664494af9c28e4303f357738a552}\label{class_sg_smart_card_a6346664494af9c28e4303f357738a552} 
+void {\bfseries Init\+Containers} ()
+\begin{DoxyCompactList}\small\item\em Initializes the containers. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_ab20eda821d21bfc41d061665a8325eb3}{Finalized}} ()
+\begin{DoxyCompactList}\small\item\em Finalize a card. \end{DoxyCompactList}\item 
+std\+::map$<$ int, std\+::string $>$ \mbox{\hyperlink{class_sg_smart_card_a1fc157155ba157d48e7bd44787a57928}{Get\+List\+Readers}} ()
+\begin{DoxyCompactList}\small\item\em Get a list of readers. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a4d448d460e7f65cbe7b1578c523ccffb}{Select\+Reader}} (const std\+::string \&r\+Name, unsigned long int \&r\+Id)
+\begin{DoxyCompactList}\small\item\em Select a reader from a readers list, set the Id and set it as an active reader. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a5b20f6774d1375919560dcf3d83cab5e}{Select\+Reader}} (const std\+::string \&r\+Name)
+\begin{DoxyCompactList}\small\item\em Select a reader from a readers list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_ad124858b9b96cb87288cc04067bbf2ba}{Authenticate\+User\+Pin}} (const std\+::string \&r\+Pin, unsigned int \texorpdfstring{$\ast$}{*}err\+Code)
+\begin{DoxyCompactList}\small\item\em Authenticate a user PIN. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a11db98afe56726257772c381e084bc8a}{Authenticate\+System\+User\+Pin}} (const std\+::string \&r\+Pin)
+\begin{DoxyCompactList}\small\item\em Authenticate a system user PIN. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a829ba2158f2a77cbfc7f350eca0c81ec}{Change\+Pin}} (const std\+::string \&r\+Old\+Pin, const std\+::string \&r\+New\+Pin)
+\begin{DoxyCompactList}\small\item\em Change the PIN of a user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a5a52a73ff98628715a7ee687d638ab96}{Change\+Pin\+With\+System\+User}} (const std\+::string \&r\+System\+User\+Pin, const std\+::string \&r\+New\+Pin)
+\begin{DoxyCompactList}\small\item\em Change the PIN of a system user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a571f3b3b776c6d9639893b14f2f465f4}{Reset\+Pin\+Trials}} (const std\+::string \&r\+System\+User\+Pin)
+\begin{DoxyCompactList}\small\item\em Reset the PIN of a system user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a58aa4e10cf5ea00893fa4ce363d7ef15}{Check\+ATR}} ()
+\begin{DoxyCompactList}\small\item\em Check if ATR is valid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_ac2319fc1714519c19cbbc1603e1ff9b4}{Sign\+Hash}} (const std\+::string \&r\+Hash, std\+::string \&r\+Signed\+Hash, unsigned long int \&r\+Priv, Hash\+Algorithm hash\+Algorithm, Key\+Size private\+Key)
+\begin{DoxyCompactList}\small\item\em Sign hash. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_ab4face7e14408603f039356b9f34b08b}{Sign\+Data}} (const std\+::string \&r\+Data, std\+::string \&r\+Hash, std\+::string \&r\+Signed\+Hash, unsigned long int \&r\+Priv, Hash\+Algorithm hash\+Algorithm, Key\+Size private\+Key\+Size)
+\begin{DoxyCompactList}\small\item\em Sign data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_accd3d874866e3143007b2db9ddbc4f93}{Get\+Certificate}} (std\+::vector$<$ BYTE $>$ \&r\+Certificate, BYTE container\+Id)
+\begin{DoxyCompactList}\small\item\em Get a certificate. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a438e3deea75c9e0a351dfdc8cafb4abf}{Set\+Session}} (unsigned long int \&session)
+\begin{DoxyCompactList}\small\item\em Set the active session to the one associated with the session Id. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ Session $>$ \mbox{\hyperlink{class_sg_smart_card_a14a00e278d805b57956009e8629a89e0}{Get\+Session}} (int session\+Id)
+\begin{DoxyCompactList}\small\item\em Get the session associated with session\+Id. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ Session $>$ \mbox{\hyperlink{class_sg_smart_card_a159563cfb5a7d7f25bb1b870ef41993f}{Get\+Active\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Get the active session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sg_smart_card_a440665a8ec9f41da3d1114203d7828e6}{Unselect\+Active\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Unselect the active session. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_sg_smart_card_a6016f5e88bd6e16c07486da26dd7d030}{Get\+New\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Create a new session, set it as the active session and get its Id. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a35f940b7bc7a0474ae00102bbbd2a1b7}{End\+Session}} (int session\+Id)
+\begin{DoxyCompactList}\small\item\em Delete the session associated with sessin\+Id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sg_smart_card_acebc0fbdac8254c4ac2db8e0d20779e1}{Get\+List\+Keys}} (std\+::vector$<$ unsigned long int $>$ \&ids)
+\begin{DoxyCompactList}\small\item\em Get a list of keys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sg_smart_card_ae6466a6b8d4da8bb372d2ddd1890f1a2}{Get\+List\+Certificates}} (std\+::vector$<$ unsigned long int $>$ \&ids)
+\begin{DoxyCompactList}\small\item\em Get a list of certificates. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ Certificate $>$ \mbox{\hyperlink{class_sg_smart_card_a01aebe35d47fb22b1444312cbcb15c5b}{Get\+Certificate}} (const unsigned long int \&id)
+\begin{DoxyCompactList}\small\item\em Retrieve the certificate with the given id. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_sg_smart_card_a4e4a5790166779536f72d19be73f65b1}{Get\+Count\+Keys}} ()
+\begin{DoxyCompactList}\small\item\em Get a count of the keys on the active session. \end{DoxyCompactList}\item 
+Key\+Size \mbox{\hyperlink{class_sg_smart_card_afe69d8637dcacc639e0d63e4e45dde31}{Get\+Key\+Size}} (const unsigned long int \&ri\+ID)
+\begin{DoxyCompactList}\small\item\em Get the key size of the key on the container with ID equal to ri\+ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a9a6260b6a37e134dd0852e8e2c36f3b0}{Insert\+Certificate}} (const std\+::vector$<$ BYTE $>$ \&r\+Certificate, const std\+::string r\+Folder\+Name, const std\+::vector$<$ BYTE $>$ \&r\+Public\+Key)
+\begin{DoxyCompactList}\small\item\em Insert a certificate into a pair of keys. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a8f7b46ae40d6960dcea31a150b892964}{Check\+Current\+Enviroment}} ()
+\begin{DoxyCompactList}\small\item\em Check if card is present and has PKCS 15 support. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a8175c749655fa6a128aed7744ab474b9}{Is\+Card\+Present}} ()
+\begin{DoxyCompactList}\small\item\em Check if card is present. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a68096702933ca2ab62a4b27547fe4fc9}{Delete\+Containers}} (BYTE key\+Reference)
+\begin{DoxyCompactList}\small\item\em Delete a container. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a3344bc440b152d1f25740c2c6ea8e1c0}{Gen\+RSAKeys}} (Key\+Size key\+Size, unsigned int \&key\+Id\+Generated)
+\begin{DoxyCompactList}\small\item\em Generate a pair of RSA keys. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_smart_card_a51db04537e7ec356818ad13d8421cd10}{Extract\+Public\+Key}} (BYTE key\+Reference, std\+::vector$<$ BYTE $>$ \&r\+Public\+Key\+Der\+And\+Mod)
+\begin{DoxyCompactList}\small\item\em Get public key of a card. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_sg_smart_card_ab80d790a98fd9d8baa2a155512c2f7a9}{Get\+Last\+Key\+UUID}} ()
+\begin{DoxyCompactList}\small\item\em Get the last generated UUID. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_sg_smart_card_ad1366a16e5415114c4e5436b71a7f6f6}{Get\+Key\+Label\+UUID}} (unsigned int id)
+\begin{DoxyCompactList}\small\item\em Get the last generated label for key with ID equal to id. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_sg_smart_card_afa2b775629c8e0ca12721885505d0dce}{Get\+Public\+Key\+Id}} (const std\+::vector$<$ BYTE $>$ \&uuid)
+\begin{DoxyCompactList}\small\item\em Get the id of the container of a public key. \end{DoxyCompactList}\item 
+const std\+::vector$<$ BYTE $>$ \mbox{\hyperlink{class_sg_smart_card_af9ab308456e51051b58d595ff1ce1df8}{Get\+Key\+UUID}} (unsigned int file\+Name)
+\begin{DoxyCompactList}\small\item\em Get the id of the public key associated with the container with id equal to file\+Name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_sg_smart_card_a617c67964a79f03ec4d8c79b7eea7f25}{Get\+Serial\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Get the serial number of a card. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_sg_smart_card_a93aa871e2846efb66d818e584bd73d24}{Get\+Reader\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the reader name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_sg_smart_card_a65f9700a644c91c6267563d4904b77c8}{Get\+Vendor\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the vendor name of a card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_sg_command}{Sg\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_sg_command_ae38b00bb1c2a4dc9ec98e685ff518867}{Extract\+Key\+Info}} (std\+::shared\+\_\+ptr$<$ Key $>$ \&p\+Key)
+\begin{DoxyCompactList}\small\item\em Extract the information of a key. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_command_a739ee30cca6dc7ce8bde7d80984e0ded}{Generate\+RSAKeys}} (Key\+Size key\+Size, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Container $>$ $>$ \&p\+Containers, unsigned int \&key\+Id\+Generated)
+\begin{DoxyCompactList}\small\item\em Generate a pair of keys. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_command_a9836c66bc24dc6a3a2779d9b4f9b0b79}{Delete\+Dedicated\+File\+Private\+Key}} (BYTE key\+Reference, BYTE file\+Name)
+\begin{DoxyCompactList}\small\item\em Delete the file of a private key. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_command_a6f8d8dfbcdb24036e9d8cb3d70c61f2c}{Delete\+Dedicated\+File\+Public\+Key}} (BYTE key\+Reference, BYTE file\+Name)
+\begin{DoxyCompactList}\small\item\em Delete the file of a public key. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_sg_command_aca5ee6e7312036448e0527baadab4368}{Counting\+Private\+Keys}} ()
+\begin{DoxyCompactList}\small\item\em Count the total of private keys. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_sg_command_a5234a9aa07ece47a8c0b487c027ebed1}{Counting\+Public\+Keys}} ()
+\begin{DoxyCompactList}\small\item\em Delete the file of a public key. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_command_aab4a3a1224916b9e660616e3ca8161e3}{Delete\+Dedicated\+File\+Certificate}} (BYTE certificate\+Reference, BYTE file\+Name)
+\begin{DoxyCompactList}\small\item\em Delete the file of a certificate. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_command_a4999b704735bf8e5a256f5b351683251}{Get\+Certificate\+Application\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Get the application data of a certificate. \end{DoxyCompactList}\item 
+BYTE \mbox{\hyperlink{class_sg_command_afd218d96a24fb0db3e382f5ee0ea264b}{Get\+Certificate\+Empty\+File\+Name}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Container $>$ $>$ \&containers)
+\begin{DoxyCompactList}\small\item\em Get empty file names for certificates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_command_afc5188c353d2b922d71c9c2c1060a8f2}{Write\+Last\+Descriptor\+Certificate}} (const std\+::string r\+Folder\+Name, BYTE certificate\+Reference, std\+::vector$<$ BYTE $>$ UUID, uint32\+\_\+t cert\+Len)
+\begin{DoxyCompactList}\small\item\em Write a certificate file into a folder. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_command_ae01ea3cedaa6a3bd8cb830d358f3cd94}{Get\+Certificate}} (std\+::vector$<$ BYTE $>$ \&certificate, BYTE certificate\+Reference)
+\begin{DoxyCompactList}\small\item\em Reads a certificate file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_command_a35f6f3cdd8b86d3e2fc0d75419c243c9}{Write\+Current\+Selected\+File}} (const std\+::vector$<$ BYTE $>$ \&r\+File)
+\begin{DoxyCompactList}\small\item\em Write a file to a card. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sg_command_a48f8f62bb85fa3fbe51a26bdd3c2d120}{Create\+Empty\+Certificate}} (const unsigned int \&r\+Size\+Certificate, BYTE certificate\+Reference)
+\begin{DoxyCompactList}\small\item\em Creates an empty certificate. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Certificate $>$ $>$ \mbox{\hyperlink{class_sg_command_a639c9c46742ad989126b792e9a25ba85}{Get\+Certificates}} ()
+\begin{DoxyCompactList}\small\item\em Get existing certificates. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Container $>$ \mbox{\hyperlink{class_sg_command_acbe54f58b6d971587e7592fd4bc450d0}{Get\+Container\+Info}} (const BYTE \&number\+Container, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Certificate $>$ $>$ certificates)
+\begin{DoxyCompactList}\small\item\em Get the information of a specified container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sg_smart_card_ab100f3d299b528d013fd9eee8b0aa776}\label{class_sg_smart_card_ab100f3d299b528d013fd9eee8b0aa776} 
+static \mbox{\hyperlink{class_sg_smart_card}{Sg\+Smart\+Card}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Prt} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sg_smart_card_a11db98afe56726257772c381e084bc8a}\label{class_sg_smart_card_a11db98afe56726257772c381e084bc8a} 
+\index{SgSmartCard@{SgSmartCard}!AuthenticateSystemUserPin@{AuthenticateSystemUserPin}}
+\index{AuthenticateSystemUserPin@{AuthenticateSystemUserPin}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{AuthenticateSystemUserPin()}{AuthenticateSystemUserPin()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Authenticate\+System\+User\+Pin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{r\+Pin }\end{DoxyParamCaption})}
+
+
+
+Authenticate a system user PIN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Pin} & The PIN of the system user to authenticate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the reader was successfully retrieved or not 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_ad124858b9b96cb87288cc04067bbf2ba}\label{class_sg_smart_card_ad124858b9b96cb87288cc04067bbf2ba} 
+\index{SgSmartCard@{SgSmartCard}!AuthenticateUserPin@{AuthenticateUserPin}}
+\index{AuthenticateUserPin@{AuthenticateUserPin}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{AuthenticateUserPin()}{AuthenticateUserPin()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Authenticate\+User\+Pin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{r\+Pin,  }\item[{unsigned int \texorpdfstring{$\ast$}{*}}]{err\+Code }\end{DoxyParamCaption})}
+
+
+
+Authenticate a user PIN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Pin} & The PIN to authenticate \\
+\hline
+{\em err\+Code} & A pointer to the error code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the PIN was successfully authenticated 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a829ba2158f2a77cbfc7f350eca0c81ec}\label{class_sg_smart_card_a829ba2158f2a77cbfc7f350eca0c81ec} 
+\index{SgSmartCard@{SgSmartCard}!ChangePin@{ChangePin}}
+\index{ChangePin@{ChangePin}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{ChangePin()}{ChangePin()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Change\+Pin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{r\+Old\+Pin,  }\item[{const std\+::string \&}]{r\+New\+Pin }\end{DoxyParamCaption})}
+
+
+
+Change the PIN of a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Old\+Pin} & The old PIN \\
+\hline
+{\em r\+New\+Pin} & The new PIN \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the change of PIN was successful 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a5a52a73ff98628715a7ee687d638ab96}\label{class_sg_smart_card_a5a52a73ff98628715a7ee687d638ab96} 
+\index{SgSmartCard@{SgSmartCard}!ChangePinWithSystemUser@{ChangePinWithSystemUser}}
+\index{ChangePinWithSystemUser@{ChangePinWithSystemUser}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{ChangePinWithSystemUser()}{ChangePinWithSystemUser()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Change\+Pin\+With\+System\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{r\+System\+User\+Pin,  }\item[{const std\+::string \&}]{r\+New\+Pin }\end{DoxyParamCaption})}
+
+
+
+Change the PIN of a system user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+System\+User\+Pin} & The old PIN \\
+\hline
+{\em r\+New\+Pin} & The new PIN \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the change of PIN was successful 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a58aa4e10cf5ea00893fa4ce363d7ef15}\label{class_sg_smart_card_a58aa4e10cf5ea00893fa4ce363d7ef15} 
+\index{SgSmartCard@{SgSmartCard}!CheckATR@{CheckATR}}
+\index{CheckATR@{CheckATR}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{CheckATR()}{CheckATR()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Check\+ATR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if ATR is valid. 
+
+\begin{DoxyReturn}{Returns}
+bool Signaling if ATR is valid or not 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a8f7b46ae40d6960dcea31a150b892964}\label{class_sg_smart_card_a8f7b46ae40d6960dcea31a150b892964} 
+\index{SgSmartCard@{SgSmartCard}!CheckCurrentEnviroment@{CheckCurrentEnviroment}}
+\index{CheckCurrentEnviroment@{CheckCurrentEnviroment}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{CheckCurrentEnviroment()}{CheckCurrentEnviroment()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Check\+Current\+Enviroment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if card is present and has PKCS 15 support. 
+
+\begin{DoxyReturn}{Returns}
+bool Signaling if the conditions are met 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a68096702933ca2ab62a4b27547fe4fc9}\label{class_sg_smart_card_a68096702933ca2ab62a4b27547fe4fc9} 
+\index{SgSmartCard@{SgSmartCard}!DeleteContainers@{DeleteContainers}}
+\index{DeleteContainers@{DeleteContainers}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{DeleteContainers()}{DeleteContainers()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Delete\+Containers (\begin{DoxyParamCaption}\item[{BYTE}]{key\+Reference }\end{DoxyParamCaption})}
+
+
+
+Delete a container. 
+
+\begin{DoxyReturn}{Returns}
+bool Signaling if the deletion was successful 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a35f940b7bc7a0474ae00102bbbd2a1b7}\label{class_sg_smart_card_a35f940b7bc7a0474ae00102bbbd2a1b7} 
+\index{SgSmartCard@{SgSmartCard}!EndSession@{EndSession}}
+\index{EndSession@{EndSession}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{EndSession()}{EndSession()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+End\+Session (\begin{DoxyParamCaption}\item[{int}]{session\+Id }\end{DoxyParamCaption})}
+
+
+
+Delete the session associated with sessin\+Id. 
+
+\begin{DoxyReturn}{Returns}
+bool Signaling of the session deletion was successful 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a51db04537e7ec356818ad13d8421cd10}\label{class_sg_smart_card_a51db04537e7ec356818ad13d8421cd10} 
+\index{SgSmartCard@{SgSmartCard}!ExtractPublicKey@{ExtractPublicKey}}
+\index{ExtractPublicKey@{ExtractPublicKey}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{ExtractPublicKey()}{ExtractPublicKey()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Extract\+Public\+Key (\begin{DoxyParamCaption}\item[{BYTE}]{key\+Reference,  }\item[{std\+::vector$<$ BYTE $>$ \&}]{r\+Public\+Key\+Der\+And\+Mod }\end{DoxyParamCaption})}
+
+
+
+Get public key of a card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Reference} & Id of the key that will be obtained \\
+\hline
+{\em r\+Public\+Key\+Der\+And\+Mod} & Save the information of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the operation was successful 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_ab20eda821d21bfc41d061665a8325eb3}\label{class_sg_smart_card_ab20eda821d21bfc41d061665a8325eb3} 
+\index{SgSmartCard@{SgSmartCard}!Finalized@{Finalized}}
+\index{Finalized@{Finalized}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{Finalized()}{Finalized()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Finalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finalize a card. 
+
+\begin{DoxyReturn}{Returns}
+bool Signaling if the finalization was successful 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a3344bc440b152d1f25740c2c6ea8e1c0}\label{class_sg_smart_card_a3344bc440b152d1f25740c2c6ea8e1c0} 
+\index{SgSmartCard@{SgSmartCard}!GenRSAKeys@{GenRSAKeys}}
+\index{GenRSAKeys@{GenRSAKeys}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GenRSAKeys()}{GenRSAKeys()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Gen\+RSAKeys (\begin{DoxyParamCaption}\item[{Key\+Size}]{key\+Size,  }\item[{unsigned int \&}]{key\+Id\+Generated }\end{DoxyParamCaption})}
+
+
+
+Generate a pair of RSA keys. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Size} & Size of the keys to generate \\
+\hline
+{\em key\+Id\+Generated} & id of generated key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the pair of keys was generated or not 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a159563cfb5a7d7f25bb1b870ef41993f}\label{class_sg_smart_card_a159563cfb5a7d7f25bb1b870ef41993f} 
+\index{SgSmartCard@{SgSmartCard}!GetActiveSession@{GetActiveSession}}
+\index{GetActiveSession@{GetActiveSession}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetActiveSession()}{GetActiveSession()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ Session $>$ Sg\+Smart\+Card\+::\+Get\+Active\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the active session. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Session$>$ A pointer to the active session 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a01aebe35d47fb22b1444312cbcb15c5b}\label{class_sg_smart_card_a01aebe35d47fb22b1444312cbcb15c5b} 
+\index{SgSmartCard@{SgSmartCard}!GetCertificate@{GetCertificate}}
+\index{GetCertificate@{GetCertificate}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetCertificate()}{GetCertificate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ Certificate $>$ Sg\+Smart\+Card\+::\+Get\+Certificate (\begin{DoxyParamCaption}\item[{const unsigned long int \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Retrieve the certificate with the given id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the requested certificate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Certificate$>$ A pointer to the requested certificate 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_accd3d874866e3143007b2db9ddbc4f93}\label{class_sg_smart_card_accd3d874866e3143007b2db9ddbc4f93} 
+\index{SgSmartCard@{SgSmartCard}!GetCertificate@{GetCertificate}}
+\index{GetCertificate@{GetCertificate}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetCertificate()}{GetCertificate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Get\+Certificate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ BYTE $>$ \&}]{r\+Certificate,  }\item[{BYTE}]{container\+Id }\end{DoxyParamCaption})}
+
+
+
+Get a certificate. 
+
+Check if the there exists a register with container\+Id.
+
+Then check the current environment and validate the PIN associated with the active session.
+
+If all previous checks passed then retrieve the container identified by container\+Id and get the certificate associated with that container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Certificate} & A reference to the certificate \\
+\hline
+{\em container\+Id} & The id of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the ATR is valid or not 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a4e4a5790166779536f72d19be73f65b1}\label{class_sg_smart_card_a4e4a5790166779536f72d19be73f65b1} 
+\index{SgSmartCard@{SgSmartCard}!GetCountKeys@{GetCountKeys}}
+\index{GetCountKeys@{GetCountKeys}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetCountKeys()}{GetCountKeys()}}
+{\footnotesize\ttfamily unsigned int Sg\+Smart\+Card\+::\+Get\+Count\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a count of the keys on the active session. 
+
+\begin{DoxyReturn}{Returns}
+int The total of the keys on the active session 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_ad1366a16e5415114c4e5436b71a7f6f6}\label{class_sg_smart_card_ad1366a16e5415114c4e5436b71a7f6f6} 
+\index{SgSmartCard@{SgSmartCard}!GetKeyLabelUUID@{GetKeyLabelUUID}}
+\index{GetKeyLabelUUID@{GetKeyLabelUUID}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetKeyLabelUUID()}{GetKeyLabelUUID()}}
+{\footnotesize\ttfamily std\+::string Sg\+Smart\+Card\+::\+Get\+Key\+Label\+UUID (\begin{DoxyParamCaption}\item[{unsigned int}]{id }\end{DoxyParamCaption})}
+
+
+
+Get the last generated label for key with ID equal to id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The last generated label 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_afe69d8637dcacc639e0d63e4e45dde31}\label{class_sg_smart_card_afe69d8637dcacc639e0d63e4e45dde31} 
+\index{SgSmartCard@{SgSmartCard}!GetKeySize@{GetKeySize}}
+\index{GetKeySize@{GetKeySize}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetKeySize()}{GetKeySize()}}
+{\footnotesize\ttfamily Key\+Size Sg\+Smart\+Card\+::\+Get\+Key\+Size (\begin{DoxyParamCaption}\item[{const unsigned long int \&}]{ri\+ID }\end{DoxyParamCaption})}
+
+
+
+Get the key size of the key on the container with ID equal to ri\+ID. 
+
+\begin{DoxyReturn}{Returns}
+Key\+Size The size of the key 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_af9ab308456e51051b58d595ff1ce1df8}\label{class_sg_smart_card_af9ab308456e51051b58d595ff1ce1df8} 
+\index{SgSmartCard@{SgSmartCard}!GetKeyUUID@{GetKeyUUID}}
+\index{GetKeyUUID@{GetKeyUUID}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetKeyUUID()}{GetKeyUUID()}}
+{\footnotesize\ttfamily const std\+::vector$<$ BYTE $>$ Sg\+Smart\+Card\+::\+Get\+Key\+UUID (\begin{DoxyParamCaption}\item[{unsigned int}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Get the id of the public key associated with the container with id equal to file\+Name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Id of the container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of the public key 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_ab80d790a98fd9d8baa2a155512c2f7a9}\label{class_sg_smart_card_ab80d790a98fd9d8baa2a155512c2f7a9} 
+\index{SgSmartCard@{SgSmartCard}!GetLastKeyUUID@{GetLastKeyUUID}}
+\index{GetLastKeyUUID@{GetLastKeyUUID}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetLastKeyUUID()}{GetLastKeyUUID()}}
+{\footnotesize\ttfamily std\+::string Sg\+Smart\+Card\+::\+Get\+Last\+Key\+UUID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the last generated UUID. 
+
+\begin{DoxyReturn}{Returns}
+string The last generated UUID 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_ae6466a6b8d4da8bb372d2ddd1890f1a2}\label{class_sg_smart_card_ae6466a6b8d4da8bb372d2ddd1890f1a2} 
+\index{SgSmartCard@{SgSmartCard}!GetListCertificates@{GetListCertificates}}
+\index{GetListCertificates@{GetListCertificates}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetListCertificates()}{GetListCertificates()}}
+{\footnotesize\ttfamily void Sg\+Smart\+Card\+::\+Get\+List\+Certificates (\begin{DoxyParamCaption}\item[{std\+::vector$<$ unsigned long int $>$ \&}]{ids }\end{DoxyParamCaption})}
+
+
+
+Get a list of certificates. 
+
+Saves the list of keys on the ids vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em ids} & A reference to a vector where the certificates will be stored \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sg_smart_card_acebc0fbdac8254c4ac2db8e0d20779e1}\label{class_sg_smart_card_acebc0fbdac8254c4ac2db8e0d20779e1} 
+\index{SgSmartCard@{SgSmartCard}!GetListKeys@{GetListKeys}}
+\index{GetListKeys@{GetListKeys}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetListKeys()}{GetListKeys()}}
+{\footnotesize\ttfamily void Sg\+Smart\+Card\+::\+Get\+List\+Keys (\begin{DoxyParamCaption}\item[{std\+::vector$<$ unsigned long int $>$ \&}]{ids }\end{DoxyParamCaption})}
+
+
+
+Get a list of keys. 
+
+Saves the list of keys on the ids vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em ids} & A reference to a vector where the keys will be stored \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sg_smart_card_a1fc157155ba157d48e7bd44787a57928}\label{class_sg_smart_card_a1fc157155ba157d48e7bd44787a57928} 
+\index{SgSmartCard@{SgSmartCard}!GetListReaders@{GetListReaders}}
+\index{GetListReaders@{GetListReaders}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetListReaders()}{GetListReaders()}}
+{\footnotesize\ttfamily std\+::map$<$ int, std\+::string $>$ Sg\+Smart\+Card\+::\+Get\+List\+Readers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a list of readers. 
+
+\begin{DoxyReturn}{Returns}
+map$<$int, string$>$ The list of readers 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a6016f5e88bd6e16c07486da26dd7d030}\label{class_sg_smart_card_a6016f5e88bd6e16c07486da26dd7d030} 
+\index{SgSmartCard@{SgSmartCard}!GetNewSession@{GetNewSession}}
+\index{GetNewSession@{GetNewSession}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetNewSession()}{GetNewSession()}}
+{\footnotesize\ttfamily size\+\_\+t Sg\+Smart\+Card\+::\+Get\+New\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new session, set it as the active session and get its Id. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t The id of the new session 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_afa2b775629c8e0ca12721885505d0dce}\label{class_sg_smart_card_afa2b775629c8e0ca12721885505d0dce} 
+\index{SgSmartCard@{SgSmartCard}!GetPublicKeyId@{GetPublicKeyId}}
+\index{GetPublicKeyId@{GetPublicKeyId}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetPublicKeyId()}{GetPublicKeyId()}}
+{\footnotesize\ttfamily unsigned int Sg\+Smart\+Card\+::\+Get\+Public\+Key\+Id (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ BYTE $>$ \&}]{uuid }\end{DoxyParamCaption})}
+
+
+
+Get the id of the container of a public key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uuid} & id of the public key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int id of the container 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a93aa871e2846efb66d818e584bd73d24}\label{class_sg_smart_card_a93aa871e2846efb66d818e584bd73d24} 
+\index{SgSmartCard@{SgSmartCard}!GetReaderName@{GetReaderName}}
+\index{GetReaderName@{GetReaderName}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetReaderName()}{GetReaderName()}}
+{\footnotesize\ttfamily std\+::string Sg\+Smart\+Card\+::\+Get\+Reader\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the reader name. 
+
+\begin{DoxyReturn}{Returns}
+string Reader name 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a617c67964a79f03ec4d8c79b7eea7f25}\label{class_sg_smart_card_a617c67964a79f03ec4d8c79b7eea7f25} 
+\index{SgSmartCard@{SgSmartCard}!GetSerialNumber@{GetSerialNumber}}
+\index{GetSerialNumber@{GetSerialNumber}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetSerialNumber()}{GetSerialNumber()}}
+{\footnotesize\ttfamily std\+::string Sg\+Smart\+Card\+::\+Get\+Serial\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the serial number of a card. 
+
+\begin{DoxyReturn}{Returns}
+string Serial number of a card 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a14a00e278d805b57956009e8629a89e0}\label{class_sg_smart_card_a14a00e278d805b57956009e8629a89e0} 
+\index{SgSmartCard@{SgSmartCard}!GetSession@{GetSession}}
+\index{GetSession@{GetSession}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetSession()}{GetSession()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ Session $>$ Sg\+Smart\+Card\+::\+Get\+Session (\begin{DoxyParamCaption}\item[{int}]{session\+Id }\end{DoxyParamCaption})}
+
+
+
+Get the session associated with session\+Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & The id of the session to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Session$>$ A pointer to the session retrieved 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a65f9700a644c91c6267563d4904b77c8}\label{class_sg_smart_card_a65f9700a644c91c6267563d4904b77c8} 
+\index{SgSmartCard@{SgSmartCard}!GetVendorName@{GetVendorName}}
+\index{GetVendorName@{GetVendorName}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{GetVendorName()}{GetVendorName()}}
+{\footnotesize\ttfamily std\+::string Sg\+Smart\+Card\+::\+Get\+Vendor\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the vendor name of a card. 
+
+\begin{DoxyReturn}{Returns}
+string Vendor name of a card 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a4b0e13955298be6c8703604301ce0026}\label{class_sg_smart_card_a4b0e13955298be6c8703604301ce0026} 
+\index{SgSmartCard@{SgSmartCard}!Init@{Init}}
+\index{Init@{Init}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes a card. 
+
+\begin{DoxyReturn}{Returns}
+bool Signaling if the initialization was successful 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a9a6260b6a37e134dd0852e8e2c36f3b0}\label{class_sg_smart_card_a9a6260b6a37e134dd0852e8e2c36f3b0} 
+\index{SgSmartCard@{SgSmartCard}!InsertCertificate@{InsertCertificate}}
+\index{InsertCertificate@{InsertCertificate}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{InsertCertificate()}{InsertCertificate()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Insert\+Certificate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ BYTE $>$ \&}]{r\+Certificate,  }\item[{const std\+::string}]{r\+Folder\+Name,  }\item[{const std\+::vector$<$ BYTE $>$ \&}]{r\+Public\+Key }\end{DoxyParamCaption})}
+
+
+
+Insert a certificate into a pair of keys. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Certificate} & The certificate to insert \\
+\hline
+{\em r\+Folder\+Name} & Name of the folder \\
+\hline
+{\em r\+Public\+Key} & Public key where the certificate will be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the operation was successful 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a8175c749655fa6a128aed7744ab474b9}\label{class_sg_smart_card_a8175c749655fa6a128aed7744ab474b9} 
+\index{SgSmartCard@{SgSmartCard}!IsCardPresent@{IsCardPresent}}
+\index{IsCardPresent@{IsCardPresent}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{IsCardPresent()}{IsCardPresent()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Is\+Card\+Present (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if card is present. 
+
+\begin{DoxyReturn}{Returns}
+bool Signaling if the card is present or not 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a571f3b3b776c6d9639893b14f2f465f4}\label{class_sg_smart_card_a571f3b3b776c6d9639893b14f2f465f4} 
+\index{SgSmartCard@{SgSmartCard}!ResetPinTrials@{ResetPinTrials}}
+\index{ResetPinTrials@{ResetPinTrials}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{ResetPinTrials()}{ResetPinTrials()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Reset\+Pin\+Trials (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{r\+System\+User\+Pin }\end{DoxyParamCaption})}
+
+
+
+Reset the PIN of a system user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+System\+User\+Pin} & The system user PIN \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the operation was successful 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a5b20f6774d1375919560dcf3d83cab5e}\label{class_sg_smart_card_a5b20f6774d1375919560dcf3d83cab5e} 
+\index{SgSmartCard@{SgSmartCard}!SelectReader@{SelectReader}}
+\index{SelectReader@{SelectReader}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{SelectReader()}{SelectReader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Select\+Reader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{r\+Name }\end{DoxyParamCaption})}
+
+
+
+Select a reader from a readers list. 
+
+Use the previous method but only use the reader name
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Name} & The reader name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the reader was successfully retrieved or not 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a4d448d460e7f65cbe7b1578c523ccffb}\label{class_sg_smart_card_a4d448d460e7f65cbe7b1578c523ccffb} 
+\index{SgSmartCard@{SgSmartCard}!SelectReader@{SelectReader}}
+\index{SelectReader@{SelectReader}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{SelectReader()}{SelectReader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Select\+Reader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{r\+Name,  }\item[{unsigned long int \&}]{r\+Id }\end{DoxyParamCaption})}
+
+
+
+Select a reader from a readers list, set the Id and set it as an active reader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Name} & The reader name \\
+\hline
+{\em r\+Id} & The reader id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the reader was successfully retrieved or not 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a438e3deea75c9e0a351dfdc8cafb4abf}\label{class_sg_smart_card_a438e3deea75c9e0a351dfdc8cafb4abf} 
+\index{SgSmartCard@{SgSmartCard}!SetSession@{SetSession}}
+\index{SetSession@{SetSession}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{SetSession()}{SetSession()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Set\+Session (\begin{DoxyParamCaption}\item[{unsigned long int \&}]{session }\end{DoxyParamCaption})}
+
+
+
+Set the active session to the one associated with the session Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session} & A reference to the session id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if setting the active session was successful 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_ab4face7e14408603f039356b9f34b08b}\label{class_sg_smart_card_ab4face7e14408603f039356b9f34b08b} 
+\index{SgSmartCard@{SgSmartCard}!SignData@{SignData}}
+\index{SignData@{SignData}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{SignData()}{SignData()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Sign\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{r\+Data,  }\item[{std\+::string \&}]{r\+Hash,  }\item[{std\+::string \&}]{r\+Signed\+Hash,  }\item[{unsigned long int \&}]{r\+Priv,  }\item[{Hash\+Algorithm}]{hash\+Algorithm,  }\item[{Key\+Size}]{private\+Key\+Size }\end{DoxyParamCaption})}
+
+
+
+Sign data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Data} & A reference to the data string \\
+\hline
+{\em r\+Hash} & A reference to the hash string \\
+\hline
+{\em r\+Signed\+Hash} & A reference to the signed hash string \\
+\hline
+{\em r\+Priv} & A reference to the container identifier \\
+\hline
+{\em hash\+Algorithm} & The hash algorithm used \\
+\hline
+{\em private\+Key} & The size of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the signing was successful or not 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_ac2319fc1714519c19cbbc1603e1ff9b4}\label{class_sg_smart_card_ac2319fc1714519c19cbbc1603e1ff9b4} 
+\index{SgSmartCard@{SgSmartCard}!SignHash@{SignHash}}
+\index{SignHash@{SignHash}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{SignHash()}{SignHash()}}
+{\footnotesize\ttfamily bool Sg\+Smart\+Card\+::\+Sign\+Hash (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{r\+Hash,  }\item[{std\+::string \&}]{r\+Signed\+Hash,  }\item[{unsigned long int \&}]{r\+Priv,  }\item[{Hash\+Algorithm}]{hash\+Algorithm,  }\item[{Key\+Size}]{private\+Key }\end{DoxyParamCaption})}
+
+
+
+Sign hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Hash} & A reference to the hash string \\
+\hline
+{\em r\+Signed\+Has} & A reference to the signed hash string \\
+\hline
+{\em r\+Priv} & A reference to the container identifier \\
+\hline
+{\em hash\+Algorithm} & The hash algorithm used \\
+\hline
+{\em private\+Key} & The size of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Signaling if the signing was successful or not 
+\end{DoxyReturn}
+\Hypertarget{class_sg_smart_card_a440665a8ec9f41da3d1114203d7828e6}\label{class_sg_smart_card_a440665a8ec9f41da3d1114203d7828e6} 
+\index{SgSmartCard@{SgSmartCard}!UnselectActiveSession@{UnselectActiveSession}}
+\index{UnselectActiveSession@{UnselectActiveSession}!SgSmartCard@{SgSmartCard}}
+\doxysubsubsection{\texorpdfstring{UnselectActiveSession()}{UnselectActiveSession()}}
+{\footnotesize\ttfamily void Sg\+Smart\+Card\+::\+Unselect\+Active\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unselect the active session. 
+
+Sets the active\+Session pointer to be null 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Sg\+SCLib/include/\mbox{\hyperlink{_sg_smart_card_8h}{Sg\+Smart\+Card.\+h}}\end{DoxyCompactItemize}
